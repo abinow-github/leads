@@ -1,0 +1,131 @@
+:root{
+    --primary-clr:#0075a9;
+}
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+/* ....................common styles.................... */
+*{
+    font-family: "Teko", sans-serif;
+}
+/*==================================================================
+                        preloder
+==================================================================*/
+@keyframes loading05 {
+    0% {
+      transform: rotateX(-360deg);
+    }
+    70% {
+      transform: rotateX(0);
+    }
+  }
+@keyframes preloaderhide {
+    0%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    99%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100%{
+      opacity: 0;
+        transform: translateY(-100%);
+        display: none !important;
+    }
+}
+@keyframes preloadershow {
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#preloader{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    background-color: white;
+    left: 0;
+    top: 0;
+    display: flex;
+    .loading {
+        font-size: 84px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 800;
+        text-align: center;
+      }
+      .loading span {
+        display: inline-block;
+        margin: 0 -0.05em;
+        img{
+            height: 50px;
+        }
+      }
+    .loading05 {
+        perspective: 1000px;
+      }
+      .loading05 span {
+        transform-origin: 50% 50% -25px;
+        transform-style: preserve-3d;
+        animation: loading05 1.6s infinite;
+      }
+      .loading05 span:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      .loading05 span:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      .loading05 span:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+      .loading05 span:nth-child(5) {
+        animation-delay: 0.4s;
+      }
+      .loading05 span:nth-child(6) {
+        animation-delay: 0.5s;
+      }
+      .loading05 span:nth-child(7) {
+        animation-delay: 0.6s;
+      }
+      
+      
+}
+#preloader.hide{
+    animation: preloaderhide 0.5s ease-out  both;
+}
+#preloader.show{
+  animation: preloadershow 0.6s ease-in  both;
+}
+/*==================================================================
+                        preloder END
+==================================================================*/
+
+
+/*==================================================================
+                        navbar
+==================================================================*/
+header .navbar{
+    padding-left: 20px;
+    padding-right: 20px;
+    .navbar-brand img{/* navbar logo */
+        height: 50px;
+    }
+    .collapse.navbar-collapse{
+        justify-content: flex-end;
+        .navbar-nav{
+            width: 50%;
+            justify-content: space-evenly;
+            .nav-item .nav-link{
+                font-weight: 600;
+                font-size: large;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+/*==================================================================
+                        navbar END
+==================================================================*/
