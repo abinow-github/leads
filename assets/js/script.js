@@ -8,6 +8,7 @@ function isHeaderLoaded() {
 if (isHeaderLoaded()) {
   setTimeout(function () {
       load.classList.add('hide');
+      load.classList.remove('show');
   }, 500);
 }
 

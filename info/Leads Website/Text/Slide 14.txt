@@ -1,0 +1,9 @@
+03
+CCNA & CCNP
+
+In our opinion, Cisco is undoubtedly the world’s No. 1 IT company. CISCO is responsible for providing some of the best networking equipment available on the global market.
+
+The CISCO certifications teach you to efficiently establish communications between network devices. This involves vital skills like segmenting networks, setting router tables, and so on. In a nutshell, it deals with the study of routers and switches.
+
+CCNA (Cisco Certified Network Associate) is the entry-level certification offered by CISCO, while CCNP (Cisco Certified Network Professional) certification is its advanced level.
+
