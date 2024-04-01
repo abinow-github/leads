@@ -8,7 +8,7 @@
     font-family: "Teko", sans-serif;
 }
 .sctn-1,.sctn-2,.sctn-3,.sctn-4,.sctn-5,.sctn-6{
-  padding: 30px 0;
+  padding: 50px 0;
 }
 /*==================================================================
                         preloder
@@ -172,6 +172,18 @@
 
 
 
+@keyframes courseTitle {
+  0%{
+    opacity: 1;
+    transform: translateY(100%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 
 /*==================================================================
@@ -183,7 +195,6 @@ header .navbar{
   top: 0;
   left: 0;
   padding: 20px 30px;
-  background-color: white;
   z-index: 50;
     .navbar-brand img{/* navbar logo */
         height: 50px;
@@ -199,6 +210,7 @@ header .navbar{
               align-items: center;
               justify-content: center;
               position: relative;
+              color: white;
             }
             .nav-item .nav-link{
                 font-weight: 600;
@@ -210,6 +222,7 @@ header .navbar{
                 overflow: hidden;
                 padding: 7px 0;
                 transition: padding 0.3s;
+                color: rgb(0, 0, 0);
             }
             .link__graphic--slide {
               position: absolute;
@@ -217,7 +230,7 @@ header .navbar{
               left: 0;
               pointer-events: none;
               fill: none;
-              stroke: #000;
+              stroke: #000000;
               stroke-width: 1px;
               top: -3px;
               stroke-width: 2px;
@@ -243,10 +256,27 @@ header .navbar{
 /*==================================================================
                         Banner 
 ==================================================================*/
+header{
+position: relative;
+
+overflow: hidden;
+
+}
 header .banner{
   height: 100vh;
-  width: 100%;
+  width: 110%;
   overflow-x: hidden;
+  .pos_abs_img{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: -1px;
+    opacity: 20%;
+    z-index: 0;
+  }
+  .col-md-6{
+    z-index: 2;
+  }
   .row{
     align-items: center;
     h1{
@@ -579,4 +609,216 @@ header .banner{
 }
 /*==================================================================
                         section-3 company achivements  END
+==================================================================*/
+
+
+
+
+
+/*==================================================================
+                        section-4 courses 
+==================================================================*/
+.sctn-4.courses{
+  padding-top: 50px;
+  .card{
+    border: 0;
+    .img-div{
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+      .crs-name{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: fit-content;
+        padding: 5px 20px 0 20px;
+        background-color: white;
+        border-radius: 15px 15px 0 0;
+        font-weight: bold;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        color: var(--primary-clr);
+        opacity: 0;
+        .img-1,.img-2{
+          position: absolute;
+          height: 80%;
+          bottom: 0;
+        }
+        .img-1{
+          left: 2px;
+          transform: translateX(-100%) scaleX(-1);
+        }
+        .img-2{
+          right: 2px;
+          transform: translateX(100%);
+        }
+      }
+    }
+    .img-div.aos-animate{
+      .crs-name{
+        animation-delay: 2s;
+        animation: courseTitle 1s linear both;
+      }
+    }
+    .duration{
+      text-align: center;
+      justify-content: center;
+      gap: 5px;
+      padding-top: 10px;
+      h5{
+        color: rgb(58, 200, 58);
+        text-transform: capitalize;
+      }
+    }
+    .cnt p{
+      text-align: center;
+      font-size: 1.1rem;
+      color: #3834348a;
+    }
+  }
+}
+/*==================================================================
+                        section-4 courses  END
+==================================================================*/
+
+
+
+
+/*==================================================================
+                        section-5 certifications 
+==================================================================*/
+.sctn-5.certifications{
+.row h2{
+  padding-bottom: 20px;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+  .col-md-4{
+    padding-bottom: 30px;
+  }
+  .card{
+    border: 0;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    height: 100%;
+    padding: 10px 10px 0 10px;
+    .card-title{
+      color: white;
+      font-weight: bold;
+      font-size: 25px;
+    }
+    p{
+      color: white;
+      padding-top: 10px;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    .medal{
+      position: absolute;
+      width: 100px;
+      top: -5%;
+      right: 10px;
+    }
+  }
+  .row .col-md-4:nth-child(1) .card{
+    background: linear-gradient(150deg, #de9ed4, #5c36b8 100%);
+    .card-title{
+      text-shadow: 0px 5px 4px #910b888f;
+    }
+  }
+  .row .col-md-4:nth-child(2) .card{
+    background: linear-gradient(150deg, #8fbde9, #5c36b8 100%);
+    .card-title{
+      text-shadow: 0px 5px 4px #0a51949a;
+    }
+  }
+  .row .col-md-4:nth-child(3) .card{
+    background: linear-gradient(150deg, #91d8a5, #087d4c 100%);
+    .card-title{
+      text-shadow: 0px 5px 4px #068d439c;
+    }
+  }
+}
+/*==================================================================
+                        section-5 certifications  END
+==================================================================*/
+
+
+
+
+/*==================================================================
+                        section-6 combos 
+==================================================================*/
+.sctn-6.combos{
+  padding: 80px 0;
+  background: linear-gradient(45deg, #09394e, #2b2d6e);
+  position: relative;
+  align-items: center;
+  .container .row{
+    min-height: 80vh;
+  }
+  .title-col{
+    display: flex;
+    align-items: center;
+    .title-div{
+      h2{
+        color: white;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 3rem;
+      }
+      p{
+        color: white;
+      }
+    }
+  }
+  .cards-col{/* cards section */
+    .col-md-6{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 10px;
+      gap: 20px;
+      .card{
+        width: 100%;
+        background: rgba(255, 255, 255, 0.13);
+        border-radius: 10px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(3.1px);
+        -webkit-backdrop-filter: blur(3.1px);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        .card-title{
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: white;
+        }
+        p{
+          color: white;
+        }
+      }
+    }
+  }
+}
+.sctn-6.combos::before,.sctn-6.combos::after{
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 50px;
+  background-color: white;
+}
+.sctn-6.combos::before{
+  top: -10px;
+  border-radius: 0 0 40px 40px;
+}
+.sctn-6.combos::after{
+  bottom: -10px;
+  border-radius: 40px 40px 0 0;
+}
+/*==================================================================
+                        section-6 combos  END
 ==================================================================*/
