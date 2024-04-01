@@ -1,16 +1,18 @@
 /////////preloader function
 var load = document.getElementById("preloader");
 let header = document.getElementById("hdr");
-function isHeaderLoaded() {
-  return header !== null; 
+
+function isFullyLoaded() {
+  return header;
 }
-// Check if header is loaded, and if so, add classes immediately
-if (isHeaderLoaded()) {
-  setTimeout(function () {
-      load.classList.add('hide');
-      load.classList.remove('show');
-  }, 500);
-}
+window.onload = function () {
+  if (isFullyLoaded()) {
+      setTimeout(function () {
+        load.classList.add('hide');
+        load.classList.remove('show');
+      }, 500);
+  }
+};
 
 /////////preloader show on every a tag clicked
 const links = document.querySelectorAll('a.link');
@@ -25,3 +27,30 @@ links.forEach(link => {
         }, 1000); // Adjust the delay as needed
     });
 });
+
+
+/////review slider
+$(document).ready(function(){
+  $('.slider').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      arrows: false,
+      dots: false,
+      pauseOnHover: false,
+      responsive: [{
+          breakpoint: 992,
+          settings: {
+              slidesToShow: 2
+          }
+      }, {
+          breakpoint: 520,
+          settings: {
+              slidesToShow: 1
+          }
+      }]
+  });
+});
+
+

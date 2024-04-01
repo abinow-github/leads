@@ -1,6 +1,7 @@
 :root{
     --primary-clr:#073f70;
     --secondary-clr:#073f7091;
+    --primary-bg:rgb(221 228 235);
 }
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap'); 
 /* ....................common styles.................... */
@@ -9,6 +10,11 @@
 }
 .sctn-1,.sctn-2,.sctn-3,.sctn-4,.sctn-5,.sctn-6{
   padding: 50px 0;
+}
+body{
+  background-color: rgb(221 228 235);
+  width: 100%;
+  overflow-x: hidden;
 }
 /*==================================================================
                         preloder
@@ -271,7 +277,6 @@ header .banner{
     width: 100%;
     top: 0;
     left: -1px;
-    opacity: 20%;
     z-index: 0;
   }
   .col-md-6{
@@ -283,6 +288,9 @@ header .banner{
       font-size: 5rem;
       font-weight: bolder;
       font-family: "Lilita One", sans-serif;
+      background: linear-gradient(117deg, #ffffff, #596e6c7d);
+      color: transparent;
+      background-clip: text;
     }
 
     .button--calypso{/* button styles */
@@ -431,7 +439,7 @@ header .banner{
       clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
       width: 310px;
       height: 310px;
-      background-color: white;
+      background-color: var(--primary-bg);
     }
   }
   .cnt-col{
@@ -467,9 +475,15 @@ header .banner{
   }
   .title{
     font-weight: bolder;
-    font-size: 4rem;
+    font-size: 6rem;
     text-transform: uppercase;
     padding-bottom: 10px;
+    background-color: #b4b6b9;
+    color: transparent;
+    text-shadow: 3px 2px 2px rgb(255 255 255 / 50%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
   }
   .col-md-6{
     margin-bottom: 80px;
@@ -483,7 +497,7 @@ header .banner{
     box-shadow: 0 3px 9px 1px #5853535e;
     border: 0;
     border-top: 4px solid;
-    padding: 10px;
+    padding: 0 20px 20px;
     .title-div{
       font-weight: bold;
       font-size: 2rem;
@@ -541,7 +555,7 @@ header .banner{
   padding: 80px 0;
   background: linear-gradient(45deg, #09394e, #2b2d6e);
   position: relative;
-  min-height: 90vh;
+  min-height: 100vh;
   align-items: center;
   .col-md-4{
     padding: 20px;
@@ -586,8 +600,14 @@ header .banner{
     h2{
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 6rem;
     padding-top: 20px;
+    background-color: #757a87;
+    color: transparent;
+    text-shadow: 3px 2px 3px rgb(218 224 255 / 50%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
     }
   }
 }
@@ -597,7 +617,7 @@ header .banner{
   position: absolute;
   left: 0;
   height: 50px;
-  background-color: white;
+  background-color: rgb(221 228 235);
 }
 .sctn-3.c-achive::before{
   top: -10px;
@@ -622,10 +642,13 @@ header .banner{
   padding-top: 50px;
   .card{
     border: 0;
+    background-color: var(--primary-bg);
+    height: 100%;
     .img-div{
       border-radius: 15px;
       overflow: hidden;
       position: relative;
+      z-index: 2;
       .crs-name{
         position: absolute;
         bottom: 0;
@@ -671,6 +694,23 @@ header .banner{
         color: rgb(58, 200, 58);
         text-transform: capitalize;
       }
+    }
+    .card-body{
+      background-color: white;
+      border-radius: 0 0 10px 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-body::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 20px;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%);
+      background-color: white;
+      z-index: 0;
     }
     .cnt p{
       text-align: center;
@@ -722,6 +762,23 @@ header .banner{
       top: -5%;
       right: 10px;
     }
+    .shine-div{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+    }
+    .shine {
+      width: 1000px;
+      height: 100px;
+      margin-left: -100px;
+      transform: rotate(30deg);
+      background: -webkit-linear-gradient(top, transparent, rgba(200, 200, 200, 0.1), transparent);
+      position: absolute;
+      animation: shine 6s ease-in-out infinite;
+    }
   }
   .row .col-md-4:nth-child(1) .card{
     background: linear-gradient(150deg, #de9ed4, #5c36b8 100%);
@@ -740,6 +797,14 @@ header .banner{
     .card-title{
       text-shadow: 0px 5px 4px #068d439c;
     }
+  }
+}
+@keyframes shine {
+  0%, 100% {
+    margin-top: -100px;
+  }
+  50% {
+    margin-top: 800px;
   }
 }
 /*==================================================================
@@ -765,7 +830,7 @@ header .banner{
     align-items: center;
     .title-div{
       h2{
-        color: white;
+        color: #bf9927;
         font-weight: bold;
         letter-spacing: 1px;
         font-size: 3rem;
@@ -809,7 +874,7 @@ header .banner{
   position: absolute;
   left: 0;
   height: 50px;
-  background-color: white;
+  background-color: var(--primary-bg);
 }
 .sctn-6.combos::before{
   top: -10px;
@@ -819,6 +884,111 @@ header .banner{
   bottom: -10px;
   border-radius: 40px 40px 0 0;
 }
+@media screen and (max-width:768px) {
+  .sctn-6.combos{
+    .cards-col{
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+}
 /*==================================================================
                         section-6 combos  END
+==================================================================*/
+
+
+
+
+/*==================================================================
+                        section-7 testimonial  END
+==================================================================*/
+.sctn-7.testimonial{
+padding: 100px 0;
+.google-review{
+  line-height: 1;
+  text-align: center;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  h3{
+    color: grey;
+  }
+  h2{
+    font-size: 5rem;
+    color: black;
+    font-weight: bolder;
+  }
+  .stars{
+    width: fit-content;
+    i{
+      background: linear-gradient(130deg, gold, #daa93e);
+        color: transparent;
+        background-clip: text;
+        font-size: 25px;
+    }
+  }
+  p{
+    color: grey;
+  }
+}
+  .slide{
+    padding: 10px;
+  }
+  .card{
+    border-radius: 10px;
+    height: 100%;
+    overflow: hidden;
+    /* background: transparent; */
+    border: 0;
+    .card-body{
+      background: white;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 87%, 34% 88%, 14% 100%, 17% 87%, 0 87%);
+      padding-bottom: 10%;
+      .rating .star i{
+        background: linear-gradient(130deg, gold, #daa93e);
+        color: transparent;
+        background-clip: text;
+      }
+      p{
+        color: grey;
+      }
+    }
+    .card-footer{
+      background: transparent;
+      .profile{
+        text-transform: uppercase;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background: var(--primary-clr);
+        font-weight: bold;
+        margin-right: 5px;
+      }
+      .user-data .name{
+        font-weight: bold;
+      }
+      .user-data .date{
+        font-size: 12px;
+        color: grey;
+      }
+    }
+  }
+}
+@media screen and (max-width:765px) {
+  .sctn-7.testimonial{
+    .google-review{
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+}
+/*==================================================================
+                        section-7 testimonial  END
 ==================================================================*/
