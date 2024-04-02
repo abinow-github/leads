@@ -904,7 +904,7 @@ header .banner{
                         section-7 testimonial  END
 ==================================================================*/
 .sctn-7.testimonial{
-padding: 100px 0;
+padding: 50px 0;
 .google-review{
   line-height: 1;
   text-align: center;
@@ -991,4 +991,46 @@ padding: 100px 0;
 }
 /*==================================================================
                         section-7 testimonial  END
+==================================================================*/
+
+
+
+/*==================================================================
+                        section-8 map  
+==================================================================*/
+.sctn-8.map{
+  padding-bottom: 50px;
+  position: relative;
+  .cnt-col{
+    h2{
+      font-weight: bold;
+      font-size: 4rem;
+      margin-bottom: 0;
+    }
+    p{
+      color: grey;
+    }
+  }
+  .img-col{
+    .map{
+      width: 90%;
+      margin: auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0px 0px 10px 1px #00000069;
+    }
+  }
+}
+.sctn-8.map::after{
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 50px;
+  background-color: var(--primary-bg);
+  bottom: -10px;
+  border-radius: 40px 40px 0 0;
+}
+/*==================================================================
+                        section-8 map  END
 ==================================================================*/
