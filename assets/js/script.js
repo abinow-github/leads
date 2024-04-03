@@ -28,6 +28,17 @@ links.forEach(link => {
     });
 });
 
+///////////////navbar scroll-y
+document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', function() {
+      var navbar = document.getElementById('navbar');
+      if (window.scrollY > 200) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  });
 
 /////review slider
 $(document).ready(function(){
@@ -52,5 +63,15 @@ $(document).ready(function(){
       }]
   });
 });
+
+ //////navbar onclick in small devices
+ function showNav(){
+    var nav=document.getElementById('navbarNavDropdown')
+    nav.classList.add('show');
+  }
+ function hideNav(){
+    var nav=document.getElementById('navbarNavDropdown')
+    nav.classList.remove('show');
+  }
 
 

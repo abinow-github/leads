@@ -364,7 +364,7 @@ overflow: hidden;
 
 }
 header .banner{
-  height: 100vh;
+  height: 50vh;
   width: 110%;
   overflow-x: hidden;
   .pos_abs_img{
@@ -381,6 +381,7 @@ header .banner{
   }
   .row{
     align-items: center;
+    align-content: flex-end;
     h1{
       font-size: 5rem;
       font-weight: bolder;
@@ -459,33 +460,7 @@ header .banner{
     }
   }
 }
-@media screen and (max-width:1195px) {
-  header{
-    height: fit-content;
-  }
-  header .banner{
-    padding-top: 100px;
-    height: fit-content;
-   .row h1{
-      font-size: 4rem;
-    }
-    .img-col{
-      overflow: hidden;
-      .img-div{
-        height: 400px;
-        img{
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-        }
-      }
-    }
-    .img-col .liquid-shape{
-      width: 95%;
-      height: 350px;
-    }
-  }
-}
+
 
 /*==================================================================
                         Banner END
@@ -566,589 +541,91 @@ header .banner{
                         section-2 hallmark 
 ==================================================================*/
 .sctn-2.hallmark-section{
-  .container{
-    margin-top: 80px;
-  }
-  .row{
-    justify-content: center;
-  }
-  .title{
-    font-weight: bolder;
-    font-size: 6rem;
-    text-transform: uppercase;
-    padding-bottom: 10px;
-    background-color: #b4b6b9;
-    color: transparent;
-    text-shadow: 3px 2px 2px rgb(255 255 255 / 50%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-  }
-  .col-md-6{
-    margin-bottom: 80px;
-    position: relative;
-  }
-  .card{
-    height: 100%;
-    background: white;
-    z-index: 1;
-    border-radius: 10px;
-    box-shadow: 0 3px 9px 1px #5853535e;
-    border: 0;
-    border-top: 4px solid;
-    padding: 0 20px 20px;
-    .title-div{
-      font-weight: bold;
-      font-size: 2rem;
-      text-transform: uppercase;
+    .container{
+      margin-top: 80px;
     }
-    .sub-title{
-      font-weight: 600;
-    }
-    p{
-      color: #393c3d91;
-    }
-  }
-  .col-md-6:nth-child(1) .card{
-    border-color: rgb(45, 121, 209);
-    .title-div{
-      color: rgb(45, 121, 209);
-    }
-  }
-  .col-md-6:nth-child(2) .card{
-    border-color: rgb(40, 219, 112);
-    .title-div{
-      color: rgb(40, 219, 112);
-    }
-  }
-  .col-md-6:nth-child(3) .card{
-    border-color: rgb(219, 162, 40);
-    .title-div{
-      color: rgb(219, 162, 40);
-    }
-  }
-  .col-md-6:nth-child(4) .card{
-    border-color: rgb(219, 55, 40);
-    .title-div{
-      color: rgb(219, 55, 40);
-    }
-  }
-  .col-md-6:nth-child(5) .card{
-    border-color: rgb(40, 189, 219);
-    .title-div{
-      color: rgb(40, 189, 219);
-    }
-  }
- 
-}
-@media screen and (max-width:900px) {
-  .sctn-2.hallmark-section{
-  .title{
-    font-size: 3rem;
-  }
-}
-}
-/*==================================================================
-                        section-2 hallmark END
-==================================================================*/
-
-
-
-/*==================================================================
-                        section-3 company achivements 
-==================================================================*/
-.sctn-3.c-achive{
-  padding: 80px 0;
-  background: linear-gradient(45deg, #09394e, #2b2d6e);
-  position: relative;
-  min-height: 100vh;
-  align-items: center;
-  .col-md-4{
-    padding: 20px;
-  }
-  .card{
-    padding: 40px 10px;
-    background: rgba(255, 255, 255, 0.13);
-     border-radius: 15px;
-     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-     backdrop-filter: blur(3.1px);
-   -webkit-backdrop-filter: blur(3.1px);
-   border: 1px solid rgba(255, 255, 255, 0.07);
-   text-align: center;
-   transition: 0.4s;
-   lord-icon{
-    color: white;
-    height: 80px;
-    width: 80px;
-   }
-   .title{
-    font-weight: bolder;
-    font-size: 3rem;
-    color: #bf9927;
-   }
-   .sub-title{
-    text-transform: uppercase;
-    color: white;
-   }
-  }
-  .card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 20px 3px #23232394;
-  }
-  .pos-abs-crs-title{
-    position: absolute;
-    bottom: -50px;
-    z-index: 3;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: fit-content;
-    h2{
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 6rem;
-    padding-top: 20px;
-    background-color: #757a87;
-    color: transparent;
-    text-shadow: 3px 2px 3px rgb(218 224 255 / 50%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    }
-  }
-}
-.sctn-3.c-achive::before,.sctn-3.c-achive::after{
-  content: '';
-  width: 100%;
-  position: absolute;
-  left: 0;
-  height: 50px;
-  background-color: rgb(221 228 235);
-}
-.sctn-3.c-achive::before{
-  top: -10px;
-  border-radius: 0 0 40px 40px;
-}
-.sctn-3.c-achive::after{
-  bottom: -10px;
-  border-radius: 40px 40px 0 0;
-}
-/*==================================================================
-                        section-3 company achivements  END
-==================================================================*/
-
-
-
-
-
-/*==================================================================
-                        section-4 courses 
-==================================================================*/
-.sctn-4.courses{
-  padding-top: 50px;
-  .title{
-    font-weight: bolder;
-    font-size: 6rem;
-    text-transform: uppercase;
-    padding-bottom: 10px;
-    background-color: #b4b6b9;
-    color: transparent;
-    text-shadow: 3px 2px 2px rgb(255 255 255 / 50%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-  }
-  .card{
-    border: 0;
-    background-color: var(--primary-bg);
-    height: 100%;
-    .img-div{
-      border-radius: 15px;
-      overflow: hidden;
-      position: relative;
-      z-index: 2;
-      .crs-name{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: fit-content;
-        padding: 5px 20px 0 20px;
-        background-color: white;
-        border-radius: 15px 15px 0 0;
-        font-weight: bold;
-        font-size: 1.5rem;
-        letter-spacing: 1px;
-        color: var(--primary-clr);
-        opacity: 0;
-        .img-1,.img-2{
-          position: absolute;
-          height: 80%;
-          bottom: 0;
-        }
-        .img-1{
-          left: 2px;
-          transform: translateX(-100%) scaleX(-1);
-        }
-        .img-2{
-          right: 2px;
-          transform: translateX(100%);
-        }
-      }
-    }
-    .img-div.aos-animate{
-      .crs-name{
-        animation-delay: 2s;
-        animation: courseTitle 1s linear both;
-      }
-    }
-    .duration{
-      text-align: center;
+    .row{
       justify-content: center;
-      gap: 5px;
-      padding-top: 10px;
-      h5{
-        color: rgb(58, 200, 58);
-        text-transform: capitalize;
+    }
+    .title{
+      font-weight: bolder;
+      font-size: 6rem;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+      background-color: #b4b6b9;
+      color: transparent;
+      text-shadow: 3px 2px 2px rgb(255 255 255 / 50%);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+    }
+    .col-md-6{
+      margin-bottom: 80px;
+      position: relative;
+    }
+    .card{
+      height: 100%;
+      background: white;
+      z-index: 1;
+      border-radius: 10px;
+      box-shadow: 0 3px 9px 1px #5853535e;
+      border: 0;
+      border-top: 4px solid;
+      padding: 0 20px 20px;
+      .title-div{
+        font-weight: bold;
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+      .sub-title{
+        font-weight: 600;
+      }
+      p{
+        color: #393c3d91;
       }
     }
-    .card-body{
-      background-color: white;
-      border-radius: 0 0 10px 10px;
-      position: relative;
-      overflow: hidden;
+    .col-md-6:nth-child(1) .card{
+      border-color: rgb(45, 121, 209);
+      .title-div{
+        color: rgb(45, 121, 209);
+      }
     }
-    .card-body::before{
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 20px;
-      top: 0;
-      left: 0;
-      transform: translateY(-100%);
-      background-color: white;
-      z-index: 0;
+    .col-md-6:nth-child(2) .card{
+      border-color: rgb(40, 219, 112);
+      .title-div{
+        color: rgb(40, 219, 112);
+      }
     }
-    .cnt p{
-      text-align: center;
-      font-size: 1.1rem;
-      color: #3834348a;
+    .col-md-6:nth-child(3) .card{
+      border-color: rgb(219, 162, 40);
+      .title-div{
+        color: rgb(219, 162, 40);
+      }
     }
+    .col-md-6:nth-child(4) .card{
+      border-color: rgb(219, 55, 40);
+      .title-div{
+        color: rgb(219, 55, 40);
+      }
+    }
+    .col-md-6:nth-child(5) .card{
+      border-color: rgb(40, 189, 219);
+      .title-div{
+        color: rgb(40, 189, 219);
+      }
+    }
+   
   }
-}
-@media screen and (max-width:900px) {
-  .sctn-4.courses{
+  @media screen and (max-width:900px) {
+    .sctn-2.hallmark-section{
     .title{
       font-size: 3rem;
     }
-  } 
-}
-/*==================================================================
-                        section-4 courses  END
-==================================================================*/
-
-
-
-
-/*==================================================================
-                        section-5 certifications 
-==================================================================*/
-.sctn-5.certifications{
-.row h2{
-  padding-bottom: 20px;
-  text-transform: capitalize;
-  font-size: 2rem;
-}
-  .col-md-4{
-    padding-bottom: 30px;
   }
-  .card{
-    border: 0;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    height: 100%;
-    padding: 10px 10px 0 10px;
-    .card-title{
-      color: white;
-      font-weight: bold;
-      font-size: 25px;
-    }
-    p{
-      color: white;
-      padding-top: 10px;
-      padding-bottom: 0;
-      margin-bottom: 0;
-    }
-    .medal{
-      position: absolute;
-      width: 100px;
-      top: -5%;
-      right: 10px;
-    }
-    .shine-div{
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      overflow: hidden;
-    }
-    .shine {
-      width: 1000px;
-      height: 100px;
-      margin-left: -100px;
-      transform: rotate(30deg);
-      background: -webkit-linear-gradient(top, transparent, rgba(200, 200, 200, 0.1), transparent);
-      position: absolute;
-      animation: shine 6s ease-in-out infinite;
-    }
   }
-  .row .col-md-4:nth-child(1) .card{
-    background: linear-gradient(150deg, #de9ed4, #5c36b8 100%);
-    .card-title{
-      text-shadow: 0px 5px 4px #910b888f;
-    }
-  }
-  .row .col-md-4:nth-child(2) .card{
-    background: linear-gradient(150deg, #8fbde9, #5c36b8 100%);
-    .card-title{
-      text-shadow: 0px 5px 4px #0a51949a;
-    }
-  }
-  .row .col-md-4:nth-child(3) .card{
-    background: linear-gradient(150deg, #91d8a5, #087d4c 100%);
-    .card-title{
-      text-shadow: 0px 5px 4px #068d439c;
-    }
-  }
-}
-@keyframes shine {
-  0%, 100% {
-    margin-top: -100px;
-  }
-  50% {
-    margin-top: 800px;
-  }
-}
-/*==================================================================
-                        section-5 certifications  END
-==================================================================*/
-
-
-
-
-/*==================================================================
-                        section-6 combos 
-==================================================================*/
-.sctn-6.combos{
-  padding: 80px 0;
-  background: linear-gradient(45deg, #09394e, #2b2d6e);
-  position: relative;
-  align-items: center;
-  .container .row{
-    min-height: 80vh;
-  }
-  .title-col{
-    display: flex;
-    align-items: center;
-    .title-div{
-      h2{
-        color: #bf9927;
-        font-weight: bold;
-        letter-spacing: 1px;
-        font-size: 3rem;
-      }
-      p{
-        color: white;
-      }
-    }
-  }
-  .cards-col{/* cards section */
-    .col-md-6{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 0 10px;
-      gap: 20px;
-      .card{
-        width: 100%;
-        background: rgba(255, 255, 255, 0.13);
-        border-radius: 10px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(3.1px);
-        -webkit-backdrop-filter: blur(3.1px);
-        border: 1px solid rgba(255, 255, 255, 0.07);
-        .card-title{
-          font-size: 1.5rem;
-          font-weight: bold;
-          color: white;
-        }
-        p{
-          color: white;
-        }
-      }
-    }
-  }
-}
-.sctn-6.combos::before,.sctn-6.combos::after{
-  content: '';
-  width: 100%;
-  position: absolute;
-  left: 0;
-  height: 50px;
-  background-color: var(--primary-bg);
-}
-.sctn-6.combos::before{
-  top: -10px;
-  border-radius: 0 0 40px 40px;
-}
-.sctn-6.combos::after{
-  bottom: -10px;
-  border-radius: 40px 40px 0 0;
-}
-@media screen and (max-width:768px) {
-  .sctn-6.combos{
-    .cards-col{
-      flex-direction: column;
-      justify-content: center;
-      gap: 20px;
-    }
-  }
-}
-/*==================================================================
-                        section-6 combos  END
-==================================================================*/
-
-
-
-
-/*==================================================================
-                        section-7 testimonial  END
-==================================================================*/
-.sctn-7.testimonial{
-padding: 50px 0;
-.google-review{
-  line-height: 1;
-  text-align: center;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 10px;
-  h3{
-    color: grey;
-  }
-  h2{
-    font-size: 5rem;
-    color: black;
-    font-weight: bolder;
-  }
-  .stars{
-    width: fit-content;
-    i{
-      background: linear-gradient(130deg, gold, #daa93e);
-        color: transparent;
-        background-clip: text;
-        font-size: 25px;
-    }
-  }
-  p{
-    color: grey;
-  }
-}
-  .slide{
-    padding: 10px;
-  }
-  .card{
-    border-radius: 10px;
-    height: 100%;
-    overflow: hidden;
-    /* background: transparent; */
-    border: 0;
-    .card-body{
-      background: white;
-      clip-path: polygon(0% 0%, 100% 0%, 100% 87%, 34% 88%, 14% 100%, 17% 87%, 0 87%);
-      padding-bottom: 10%;
-      .rating .star i{
-        background: linear-gradient(130deg, gold, #daa93e);
-        color: transparent;
-        background-clip: text;
-      }
-      p{
-        color: grey;
-      }
-    }
-    .card-footer{
-      background: transparent;
-      .profile{
-        text-transform: uppercase;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        background: var(--primary-clr);
-        font-weight: bold;
-        margin-right: 5px;
-      }
-      .user-data .name{
-        font-weight: bold;
-      }
-      .user-data .date{
-        font-size: 12px;
-        color: grey;
-      }
-    }
-  }
-}
-@media screen and (max-width:765px) {
-  .sctn-7.testimonial{
-    .google-review{
-      flex-direction: column;
-      gap: 0;
-    }
-  }
-}
-/*==================================================================
-                        section-7 testimonial  END
-==================================================================*/
-
-
-
-/*==================================================================
-                        section-8 map  
-==================================================================*/
-.sctn-8.map{
-  padding-bottom: 50px;
-  position: relative;
-  .cnt-col{
-    h2{
-      font-weight: bold;
-      font-size: 4rem;
-      margin-bottom: 0;
-    }
-    p{
-      color: grey;
-    }
-  }
-  .img-col{
-    .map{
-      width: 90%;
-      margin: auto;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0px 0px 10px 1px #00000069;
-    }
-  }
-}
-/*==================================================================
-                        section-8 map  END
-==================================================================*/
+  /*==================================================================
+                          section-2 hallmark END
+  ==================================================================*/
 
 
 

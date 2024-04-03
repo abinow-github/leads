@@ -39,13 +39,16 @@
           </div>
     </div>
     <header id="hdr">
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
             <div class="container-fluid">
               <a class="navbar-brand" href="home"><img src="assets/img/logo/leads logo.png" alt="leads" srcset=""></a>
-              <button class="navbar-toggler" type="button">
+              <button class="navbar-toggler" type="button" onclick="showNav()">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="close-btn-div hide-lg  judtify-content-right">
+                  <button class="close-nav" onclick="hideNav()"><i class="fa-regular fa-circle-xmark"></i></button>
+                </div>
                 <ul class="navbar-nav">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home
@@ -69,7 +72,19 @@
                         <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
                       </svg></a>
                   </li>
-                  <li class="nav-item dropdown">
+                  <li class="nav-item">
+                    <a class="nav-link link" href="gallery">Gallery
+                      <svg class="link__graphic--slide" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+                      </svg></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link" href="courses">Courses
+                      <svg class="link__graphic--slide" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+                      </svg></a>
+                  </li>
+                  <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       courses
                       <svg class="link__graphic--slide" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
@@ -81,7 +96,7 @@
                       <li><a class="dropdown-item link" href="#">Another action</a></li>
                       <li><a class="dropdown-item link" href="#">Something else here</a></li>
                     </ul>
-                  </li>
+                  </li> -->
                   <li class="nav-item">
                     <a class="nav-link link" href="contact">contact us
                       <svg class="link__graphic--slide" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
@@ -105,14 +120,13 @@
               </div>
               <div class="col-md-6 col-lg-5 img-col">
 
-                <div class="liquid-shape">
-                  <video src="assets/video/network.mp4" autoplay muted loop class="video"></video>
+                <div class="img-div">
+                  <img src="assets/img/others/bnr-model.png" class="w-100" alt="">
                 </div>
-                <div class="liquid-shape2"></div>
 
               </div>
             </div>
-            <img src="assets/img/others/hdr-bg3.jpg" alt="" class="pos_abs_img" srcset="">
+            <img src="assets/img/others/web banner  3.jpg" alt="" class="pos_abs_img" srcset="">
           </div>
         <!-- banner END -->
     </header>
@@ -272,7 +286,7 @@
     </div>
   </div>
   <div class="pos-abs-crs-title">
-    <h2>courses</h2>
+    <h2></h2>
   </div>
 </section>
 <!--*==================================================================
@@ -287,6 +301,9 @@
 ==================================================================*-->
 <section class="sctn-4 courses mt-5">
   <div class="container">
+    <div class="row">
+      <h2 class="title text-center">courses</h2>
+    </div>
     <div class="row">
 
       <div class="col-md-6">
@@ -483,7 +500,7 @@
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star-half-stroke"></i>
           </div>
-          <p>30+ reviews</p>
+          <p class="mb-0">30+ reviews</p>
         </div>
         
       </div>
@@ -624,12 +641,12 @@
 <section class="sctn-8 map">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 cnt-col d-flex align-items-center">
+      <div class="col-md-6 cnt-col d-flex align-items-center text-center">
         <div class="cnt-div">
-          <div class="title d-flex align-items-center">
+          <div class="title d-flex align-items-center justify-content-center">
           <img src="assets/img/icon/map-unscreen.gif" height="100px" alt="">
-          <h2>Find Us</h2></div>
-          <p>Welcome to Leads Academy, your gateway to networking excellence located in the vibrant city of Manjeri, Kerala!
+          <h2 data-aos="fade-up" data-aos-duration="1000">Find Us</h2></div>
+          <p data-aos="fade-up" data-aos-duration="1500">Welcome to Leads Academy, your gateway to networking excellence located in the vibrant city of Manjeri, Kerala!
             Join us as we dive into the exciting world of networking education. Let's embark on this journey together!
           </p>
         </div>
@@ -644,6 +661,18 @@
 </section>
 <!--*==================================================================
                         map END
+==================================================================*-->
+
+
+
+<!--*==================================================================
+                        footer END
+==================================================================*-->
+<footer class="footer-section" id="footer">
+</footer>
+<script src="assets/js/footer.js"></script>
+<!--*==================================================================
+                        footer END
 ==================================================================*-->
 
 
