@@ -467,7 +467,7 @@ header .banner{
     padding-top: 100px;
     height: fit-content;
    .row h1{
-      font-size: 4rem;
+      font-size: 3rem;
     }
     .img-col{
       overflow: hidden;
@@ -643,6 +643,9 @@ header .banner{
 }
 @media screen and (max-width:900px) {
   .sctn-2.hallmark-section{
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
   .title{
     font-size: 3rem;
   }
@@ -769,7 +772,7 @@ header .banner{
       z-index: 2;
       .crs-name{
         position: absolute;
-        bottom: 0;
+        bottom: -1px;
         left: 0;
         right: 0;
         margin: auto;
@@ -839,6 +842,9 @@ header .banner{
 }
 @media screen and (max-width:900px) {
   .sctn-4.courses{
+    .row .col-md-6{
+      margin-bottom: 30px;
+    }
     .title{
       font-size: 3rem;
     }
@@ -932,6 +938,13 @@ header .banner{
     margin-top: 800px;
   }
 }
+@media screen and (max-width:900px) {
+  .sctn-5.certifications{
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+  }
+}
 /*==================================================================
                         section-5 certifications  END
 ==================================================================*/
@@ -1011,6 +1024,9 @@ header .banner{
 }
 @media screen and (max-width:768px) {
   .sctn-6.combos{
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
     .cards-col{
       flex-direction: column;
       justify-content: center;

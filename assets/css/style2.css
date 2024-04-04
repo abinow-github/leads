@@ -10,6 +10,9 @@
 }
 .sctn-1,.sctn-2,.sctn-3,.sctn-4,.sctn-5,.sctn-6,.sctn-gallery{
   padding: 50px 0;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
 }
 body{
   background-color: rgb(221 228 235);
@@ -1037,3 +1040,114 @@ footer{
   left: 20px;
   background-color: #2957c5;
 }
+
+
+
+
+
+/*==================================================================
+                        section-4 courses 
+==================================================================*/
+.sctn-4.courses{
+  padding-top: 50px;
+  .title{
+    font-weight: bolder;
+    font-size: 6rem;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    background-color: #b4b6b9;
+    color: transparent;
+    text-shadow: 3px 2px 2px rgb(255 255 255 / 50%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+  }
+  .card{
+    border: 0;
+    background-color: var(--primary-bg);
+    height: 100%;
+    .img-div{
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+      .crs-name{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: fit-content;
+        padding: 5px 20px 0 20px;
+        background-color: white;
+        border-radius: 15px 15px 0 0;
+        font-weight: bold;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        color: var(--primary-clr);
+        opacity: 0;
+        .img-1,.img-2{
+          position: absolute;
+          height: 80%;
+          bottom: 0;
+        }
+        .img-1{
+          left: 2px;
+          transform: translateX(-100%) scaleX(-1);
+        }
+        .img-2{
+          right: 2px;
+          transform: translateX(100%);
+        }
+      }
+    }
+    .img-div.aos-animate{
+      .crs-name{
+        animation-delay: 2s;
+        animation: courseTitle 1s linear both;
+      }
+    }
+    .duration{
+      text-align: center;
+      justify-content: center;
+      gap: 5px;
+      padding-top: 10px;
+      h5{
+        color: rgb(58, 200, 58);
+        text-transform: capitalize;
+      }
+    }
+    .card-body{
+      background-color: white;
+      border-radius: 0 0 10px 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-body::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 20px;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%);
+      background-color: white;
+      z-index: 0;
+    }
+    .cnt p{
+      text-align: center;
+      font-size: 1.1rem;
+      color: #3834348a;
+    }
+  }
+}
+@media screen and (max-width:900px) {
+  .sctn-4.courses{
+    .title{
+      font-size: 3rem;
+    }
+  } 
+}
+/*==================================================================
+                        section-4 courses  END
+==================================================================*/

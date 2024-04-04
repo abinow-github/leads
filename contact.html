@@ -24,6 +24,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+
+    <!-- contact -->
+    <link rel="stylesheet" href="assets/contact/css/style.css">
     
 </head>
 <body>
@@ -111,7 +114,7 @@
           <div class="banner container">
             <div class="row h-100">
               <div class="col-md-6 col-lg-7 cnt-col">
-                <h1>About</h1>
+                <h1>Contact</h1>
               </div>
             </div>
             <img src="assets/img/others/web banner  3.jpg" alt="" class="pos_abs_img" srcset="">
@@ -121,45 +124,112 @@
 
 
 <!--*==================================================================
-                        section-1 about
+                        contact form
 ==================================================================*-->
-<section class="sctn-1">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-md-6 col-lg-5 img-col">
-          <div class="img-div" data-aos="flip-left" data-aos-duration="1000">
-            <img src="assets/img/others/about-1.jpg" alt="">
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <div class="wrapper">
+          <div class="row no-gutters mb-5">
+            <div class="col-md-7">
+              <div class="contact-wrap w-100 p-md-5 p-4">
+                <div id="form-message-warning" class="mb-4"></div> 
+                <div id="form-message-success" class="mb-4">
+                  Your message was sent, thank you!
+                </div>
+                <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="label" for="name">Full Name</label>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                      </div>
+                    </div>
+                    <div class="col-md-6"> 
+                      <div class="form-group">
+                        <label class="label" for="email">Email Address</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label class="label" for="subject">Subject</label>
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label class="label" for="#">Message</label>
+                        <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <input type="submit" value="Send Message" class="btn btn-primary">
+                        <div class="submitting"></div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-5 d-flex align-items-stretch">
+              <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15660.05981024073!2d76.1165723!3d11.1122633!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba63670aee49f5d%3A0x408e1af3af4f8b41!2sLeads%20Institute%20Of%20Networking!5e0!3m2!1sen!2sin!4v1712037191709!5m2!1sen!2sin" width="100%" height="100%" style="border:0;min-height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
           </div>
-          <div class="pos-abs-shape"></div>
-          <div class="pos-abs-shape2"></div>
-        </div>
-        <div class="col-md-6 col-lg-7 cnt-col">
-          <h2 data-aos="fade-up" data-aos-duration="1500">the porpuse</h2>
-          <p data-aos="fade-up" data-aos-duration="1500">
-            Leads is an IT training centre hyper-focused ontransforming students into ultra-competentengineers in the fields of IT, networking, andcomputer hardware.
-            Contrary to popular belief, the skills that you havein a discipline are far more valuable than a degreein that discipline. We founded Leads as a result ofthis epiphany.
-            Today, over a decade after its founding, Leadsremains a trailblazer in arming young minds withprecise skills that make them prized engineers inthe industry.
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-lg-5 img-col">
-          <div class="img-div" data-aos="flip-right" data-aos-duration="1000">
-            <img src="assets/img/others/experince-2.jpg" alt="">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="dbox w-100 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                  <span class="fa fa-map-marker"></span>
+                </div>
+                <div class="text">
+                  <p> Leads Institute Of Networking, Karuvambram, Manjeri, Kerala 676517</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="dbox w-100 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                  <span class="fa fa-phone"></span>
+                </div>
+                <div class="text">
+                  <p><a href="tel://+919447106726">+91 9447106726</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="dbox w-100 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                  <span class="fa fa-paper-plane"></span>
+                </div>
+                <div class="text">
+                  <p> <a href="mailto:info@leads.com">info@leads.com</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="dbox w-100 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                  <span class="fa fa-globe"></span>
+                </div>
+                <div class="text">
+                  <p> <a href="#">leads.com</a></p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="pos-abs-shape"></div>
-          <div class="pos-abs-shape2"></div>
-        </div>
-        <div class="col-md-6 col-lg-7 cnt-col">
-          <h2 data-aos="fade-up" data-aos-duration="1500">the leads experience</h2>
-          <p data-aos="fade-up" data-aos-duration="1500">How can we provide maximum value to our students in theshortest time possible? At Leads, this is the one questionthat we constantly ask ourselves.Technology is always evolving at a staggering pace. Ourcourses and our teaching methodologies must keep upwith it if we are to bring out the all-star engineers in ourstudents.Hence, our courses are designed based on twofundamental rules. Firstly, they must provide a strongfoundation in the respective subjects. Secondly, they mustequip the students with the necessary tools so that theycan pursue new heights even after their placements.</p>
         </div>
       </div>
     </div>
-  </section>
-  <!--*==================================================================
-                          section-1 about END
-  ==================================================================*-->
+  </div>
+</section>
+<!--*==================================================================
+                          contact form END
+==================================================================*-->
 
 
 
@@ -172,6 +242,14 @@
 <!--*==================================================================
                         footer END
 ==================================================================*-->
+
+<!-- contact -->
+<script src="assets/contact/js/jquery.min.js"></script>
+  <script src="assets/contact/js/popper.js"></script>
+  <script src="assets/contact/js/bootstrap.min.js"></script>
+  <script src="assets/contact/js/jquery.validate.min.js"></script>
+  <script src="assets/contact/js/google-map.js"></script>
+  <script src="assets/contact/js/main.js"></script>
 
     <!-- bootsrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
