@@ -486,6 +486,11 @@ header .banner{
     }
   }
 }
+@media screen and (min-width:700px) {
+  header .banner .img-col .img-div{
+    padding: 10%;
+  }
+}
 
 /*==================================================================
                         Banner END
@@ -972,6 +977,7 @@ header .banner{
         font-weight: bold;
         letter-spacing: 1px;
         font-size: 3rem;
+        text-transform: capitalize;
       }
       p{
         color: white;
@@ -1046,87 +1052,111 @@ header .banner{
 ==================================================================*/
 .sctn-7.testimonial{
 padding: 50px 0;
-.google-review{
-  line-height: 1;
-  text-align: center;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
+.title{
+  font-weight: bolder;
+  font-size: 6rem;
+  text-transform: uppercase;
   padding-bottom: 10px;
-  h3{
-    color: grey;
-  }
-  h2{
-    font-size: 5rem;
-    color: black;
-    font-weight: bolder;
-  }
-  .stars{
-    width: fit-content;
-    i{
-      background: linear-gradient(130deg, gold, #daa93e);
-        color: transparent;
-        background-clip: text;
-        font-size: 25px;
-    }
-  }
-  p{
-    color: grey;
-  }
+  background-color: #b4b6b9;
+  color: transparent;
+  text-shadow: 3px 2px 2px rgb(255 255 255 / 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
 }
+
   .slide{
     padding: 10px;
   }
-  .card{
-    border-radius: 10px;
-    height: 100%;
-    overflow: hidden;
-    /* background: transparent; */
-    border: 0;
-    .card-body{
-      background: white;
-      clip-path: polygon(0% 0%, 100% 0%, 100% 87%, 34% 88%, 14% 100%, 17% 87%, 0 87%);
-      padding-bottom: 10%;
-      .rating .star i{
-        background: linear-gradient(130deg, gold, #daa93e);
-        color: transparent;
-        background-clip: text;
-      }
-      p{
-        color: grey;
-      }
-    }
-    .card-footer{
-      background: transparent;
-      .profile{
-        text-transform: uppercase;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        background: var(--primary-clr);
-        font-weight: bold;
-        margin-right: 5px;
-      }
-      .user-data .name{
-        font-weight: bold;
-      }
-      .user-data .date{
-        font-size: 12px;
-        color: grey;
-      }
+  .slide .row{
+    justify-content: center;
+  }
+  .slide .msg-box{
+    padding: 50px;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    p{
+      position: relative;
+      color: grey;
     }
   }
+  .slide .msg-box .fa-quote-right,.slide .msg-box .fa-quote-left{
+    position: absolute;
+    z-index: 0;
+    font-weight: bold;
+    font-size: 50px;
+    color: #80808080;
+  }
+  .slide .msg-box .fa-quote-right{
+    bottom: 0;
+    right: 0;
+    transform: translate(30px,30px);
+  }
+  .slide .msg-box .fa-quote-left{
+    top: 0;
+    left: 0;
+    transform: translate(-30px,-30px);
+  }
+  .slide .msg-box::before{
+    content: '';
+    width: 50px;
+    height: 50px;
+    bottom: 0;
+    right: 50px;
+    position: absolute;
+    background-color: white;
+    clip-path: polygon(75% 0, 0 0, 100% 100%);
+    transform: translateY(100%);
+  }
+  .slide .name{
+    text-transform: capitalize;
+    font-weight: bold;
+    background: linear-gradient(45deg, #758187, #bfbfbf);
+    width: fit-content;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .slide.slick-slide .profile{
+    width: 300px;
+    height: 300px;
+    border-radius: 50% 50% 50% 50%;
+    overflow: hidden;
+    transform: scale(0.5) translate(-10px,10px);
+    transition: 1s;
+  }
+  .slide.slick-slide.slick-active .profile{
+    transform: scale(1) translate(0,0);
+    border: 5px solid white;
+    border-radius: 50% 50% 50% 0;
+  }
+  .slide .profile img{
+    object-fit: cover;
+  }
+  
 }
 @media screen and (max-width:765px) {
   .sctn-7.testimonial{
+    .title{
+      font-size: 3rem;
+    }
     .google-review{
       flex-direction: column;
       gap: 0;
+    }
+    .slide .profile-col{
+      display: flex;
+      justify-content: flex-end;
+    }
+    .slide.slick-slide .profile{
+      width: 150px;
+      height: 150px;
+      border-radius: 50% 50% 50% 50%;
+      margin-top: 50px;
+    }
+    .slide.slick-slide.slick-active .profile{
+      border-radius: 50% 50% 0 50%;
     }
   }
 }
@@ -1164,6 +1194,76 @@ padding: 50px 0;
 }
 /*==================================================================
                         section-8 map  END
+==================================================================*/
+
+
+
+
+/*==================================================================
+                        section-9 student placements 
+==================================================================*/
+.sctn-9.placement{
+  padding: 80px 0;
+  background: linear-gradient(45deg, #09394e, #2b2d6e);
+  position: relative;
+  align-items: center;
+  .container .row{
+    min-height: 80vh;
+    align-items: center;
+  }
+  .cnt-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .title{
+        color: #bf9927;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 3rem;
+        text-transform: capitalize;
+    }
+    .cnt{
+      color: white;
+    }
+  }
+
+  .slider-col{/* slider */
+    height: fit-content;
+  }
+  .slider-col .placement-slider{
+    .img-div{
+      padding: 10px;
+    }
+    .slick-slide img,.slick-slide.slick-cloned img{
+      width: 100%;
+      border-radius: 10px;
+      transform: scale(0.8);
+      transition: 0.5s;
+    }
+    .slick-slide.slick-active img,.slick-slide.slick-cloned.slick-active img{
+      transform: scale(1);
+      transition: 0.5s;
+    }
+  }
+}
+.sctn-9.placement::before,.sctn-9.placement::after{
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 50px;
+  background-color: var(--primary-bg);
+}
+.sctn-9.placement::before{
+  top: -10px;
+  border-radius: 0 0 40px 40px;
+}
+.sctn-9.placement::after{
+  bottom: -10px;
+  border-radius: 40px 40px 0 0;
+}
+/*==================================================================
+                        section-9 student placements  END
 ==================================================================*/
 
 

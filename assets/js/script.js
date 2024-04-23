@@ -42,11 +42,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /////review slider
 $(document).ready(function(){
-  $('.slider').slick({
-      slidesToShow: 3,
+  $('.testimonial-slider').slick({
+      slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 2000,
+      speed:1500,
+      arrows: false,
+      dots: false,
+      pauseOnHover: false,
+      responsive: [{
+          breakpoint: 992,
+          settings: {
+              slidesToShow: 1
+          }
+      }, {
+          breakpoint: 720,
+          settings: {
+              slidesToShow: 1
+          }
+      }]
+  });
+});
+
+/////student placements slider / section-9
+$(document).ready(function(){
+  $('.placement-slider').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      speed:1000,
       arrows: false,
       dots: false,
       pauseOnHover: false,
@@ -75,3 +101,7 @@ $(document).ready(function(){
   }
 
 
+//////instagram redirect with onclick
+function insta(){
+  window.location.href="https://www.instagram.com/leadsnetwork/"
+}

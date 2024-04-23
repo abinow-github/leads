@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leads</title>
+    <title>Leads-projects</title>
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -16,8 +16,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- css -->
     <link rel="stylesheet" href="assets/css/style2.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
     <!-- aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- font awesome cdn -->
@@ -26,8 +24,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-
-
     
 </head>
 <body>
@@ -69,12 +65,11 @@
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link link" href="courses">Courses
+                    <a class="nav-link link" href="features">features
                       <svg class="link__graphic--slide" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
                         <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
                       </svg></a>
                   </li>
-                 
                   <li class="nav-item">
                     <a class="nav-link link" href="projects">projects
                       <svg class="link__graphic--slide" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
@@ -83,6 +78,12 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link link" href="gallery">Gallery
+                      <svg class="link__graphic--slide" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+                      </svg></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link" href="courses">Courses
                       <svg class="link__graphic--slide" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
                         <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
                       </svg></a>
@@ -116,7 +117,7 @@
           <div class="banner container">
             <div class="row h-100">
               <div class="col-md-6 col-lg-7 cnt-col">
-                <h1>Gallery</h1>
+                <h1>Project</h1>
               </div>
             </div>
             <img src="assets/img/others/web banner  3.jpg" alt="" class="pos_abs_img" srcset="">
@@ -128,89 +129,35 @@
 
 
 
-
 <!--*==================================================================
-                        gallery 
+                        project card
 ==================================================================*-->
-<section class="sctn-gallery">
+<section class="project">
     <div class="container">
-      <div class="row button-row pb-2">
-        <div id="myBtnContainer">
-          <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-          <button class="btn" onclick="filterSelection('event')"> Events</button>
+        <div class="row img-row">
+
+            <div class="img-div"><img src="assets/img/others/experince-1.jpg" class="w-100 h-100" alt=""></div>
+
         </div>
-      </div>
-        <div class="row">
-                <div class="col-md-3 col-sm-4 image col-6">
-                    <div class="thumbnail">
-                        <a data-fancybox="video-gallery"  href="assets/img/insta/350430181_1640238593066867_1774696008591335444_n.jpeg" class="fancybox" rel="ligthbox"><img src="assets/img/insta/350430181_1640238593066867_1774696008591335444_n.jpeg" class="zoom img-fluid "  alt=""></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-6 image event">
-                    <div class="thumbnail">
-                        <a data-fancybox="video-gallery"  href="assets/img/insta/352679520_980017683175346_3080337179420375178_n.jpg" class="fancybox" rel="ligthbox"><img src="assets/img/insta/352679520_980017683175346_3080337179420375178_n.jpg" class="zoom img-fluid "  alt=""></a>
-                    </div>
-                </div>
-                
-            </div>
+        <div class="row title-date-row pb-4 pt-2">
+            <h3 class="title text-capitalize">demo project</h3>
+            <h5 class="date">02/02/2024</h5>
+        </div>
+
+        <div class="row cnt-row">
+            <p>saighviauysgviubdtgstouigibapisnerhgyiucvg-areighierhgcmpadiofgjhioprhoivh urehg pfuerhpug9h urehguhuhreu urehggouherwpw</p>
+        </div>
     </div>
 </section>
-
-<script>
-  filterSelection("all")
-  function filterSelection(c) {
-    var x, i;
-    x = document.getElementsByClassName("image");
-    if (c == "all") c = "";
-    for (i = 0; i < x.length; i++) {
-      w3RemoveClass(x[i], "show");
-      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-    }
-  }
-  
-  function w3AddClass(element, name) {
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-    }
-  }
-  
-  function w3RemoveClass(element, name) {
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-      while (arr1.indexOf(arr2[i]) > -1) {
-        arr1.splice(arr1.indexOf(arr2[i]), 1);     
-      }
-    }
-    element.className = arr1.join(" ");
-  }
-  
-  
-  // Add active class to the current button (highlight it)
-  var btnContainer = document.getElementById("myBtnContainer");
-  var btns = btnContainer.getElementsByClassName("btn");
-  for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function(){
-      var current = document.getElementsByClassName("active");
-      current[0].className = current[0].className.replace(" active", "");
-      this.className += " active";
-    });
-  }
-  </script>
 <!--*==================================================================
-                        gallery END
+                        project card END
 ==================================================================*-->
 
-<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+
 
 
 <!--*==================================================================
-                        footer
+                        footer END
 ==================================================================*-->
 <footer class="footer-section" id="footer">
 </footer>
@@ -218,44 +165,6 @@
 <!--*==================================================================
                         footer END
 ==================================================================*-->
-
-<script src="assets/gallery/js/vendor/modernizr-3.5.0.min.js"></script>
-    <!-- Jquery, Popper, Bootstrap -->
-    <script src="assets/gallery/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="assets/gallery/js/popper.min.js"></script>
-    <script src="assets/gallery/js/bootstrap.min.js"></script>
-    <!-- Jquery Mobile Menu -->
-    <script src="assets/gallery/js/jquery.slicknav.min.js"></script>
-
-    <!-- Jquery Slick , Owl-Carousel Plugins -->
-    <script src="assets/gallery/js/owl.carousel.min.js"></script>
-    <script src="assets/gallery/js/slick.min.js"></script>
-    <!-- One Page, Animated-HeadLin -->
-    <script src="assets/gallery/js/wow.min.js"></script>
-    <script src="assets/gallery/js/jquery.magnific-popup.js"></script>
-
-    <!-- Date Picker -->
-    <script src="assets/gallery/js/gijgo.min.js"></script>
-    <!-- Nice-select, sticky -->
-    <script src="assets/gallery/js/jquery.nice-select.min.js"></script>
-    <script src="assets/gallery/js/jquery.sticky.js"></script>
-    
-    <!-- counter , waypoint,Hover Direction -->
-    <script src="assets/gallery/js/jquery.counterup.min.js"></script>
-    <script src="assets/gallery/js/waypoints.min.js"></script>
-    <script src="assets/gallery/js/jquery.countdown.min.js"></script>
-    <script src="assets/gallery/js/hover-direction-snake.min.js"></script>
-
-    <!-- contact js -->
-    <script src="assets/gallery/js/contact.js"></script>
-    <script src="assets/gallery/js/jquery.form.js"></script>
-    <script src="assets/gallery/js/jquery.validate.min.js"></script>
-    <script src="assets/gallery/js/mail-script.js"></script>
-    <script src="assets/gallery/js/jquery.ajaxchimp.min.js"></script>
-    
-    <!-- Jquery Plugins, main Jquery -->	
-    <script src="assets/gallery/js/plugins.js"></script>
-    <script src="assets/gallery/js/main.js"></script>
 
     <!-- bootsrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
