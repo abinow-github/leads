@@ -75,12 +75,7 @@
                       </svg></a>
                   </li>
                  
-                  <li class="nav-item">
-                    <a class="nav-link link" href="projects">projects
-                      <svg class="link__graphic--slide" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-                        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
-                      </svg></a>
-                  </li>
+                  
                   <li class="nav-item">
                     <a class="nav-link link" href="gallery">Gallery
                       <svg class="link__graphic--slide" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
@@ -138,19 +133,72 @@
         <div id="myBtnContainer">
           <button class="btn active" onclick="filterSelection('all')"> Show all</button>
           <button class="btn" onclick="filterSelection('event')"> Events</button>
+          <button class="btn" onclick="filterSelection('project-img')"> Projects</button>
         </div>
       </div>
-        <div class="row">
-                <div class="col-md-3 col-sm-4 image col-6">
+        <div class="images">
+                <div class="image">
                     <div class="thumbnail">
                         <a data-fancybox="video-gallery"  href="assets/img/insta/350430181_1640238593066867_1774696008591335444_n.jpeg" class="fancybox" rel="ligthbox"><img src="assets/img/insta/350430181_1640238593066867_1774696008591335444_n.jpeg" class="zoom img-fluid "  alt=""></a>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-4 col-6 image event">
+                
+                <div class="image event">
                     <div class="thumbnail">
                         <a data-fancybox="video-gallery"  href="assets/img/insta/352679520_980017683175346_3080337179420375178_n.jpg" class="fancybox" rel="ligthbox"><img src="assets/img/insta/352679520_980017683175346_3080337179420375178_n.jpg" class="zoom img-fluid "  alt=""></a>
                     </div>
                 </div>
+
+                <div class="image event">
+                    <div class="thumbnail">
+                        <a data-fancybox="video-gallery"  href="info/event/WhatsApp Image 2024-04-23 at 13.47.01_cdcb4380.jpg" class="fancybox" rel="ligthbox"><img src="info/event/WhatsApp Image 2024-04-23 at 13.47.01_cdcb4380.jpg" class="zoom img-fluid "  alt=""></a>
+                    </div>
+                </div>
+
+                <div class="image project-img">
+                    <div class="thumbnail">
+                        <a data-fancybox="video-gallery"  href="info/projects/WhatsApp Image 2024-04-23 at 14.49.15_f2cffb6f.jpg" class="fancybox" rel="ligthbox"><img src="info/projects/WhatsApp Image 2024-04-23 at 14.49.15_f2cffb6f.jpg" class="zoom img-fluid "  alt=""></a>
+                    </div>
+                </div>
+
+                <div class="image event">
+                    <div class="thumbnail">
+                        <a data-fancybox="video-gallery"  href="info/event/WhatsApp Image 2024-04-23 at 13.47.52_d94b5f66.jpg" class="fancybox" rel="ligthbox"><img src="info/event/WhatsApp Image 2024-04-23 at 13.47.52_d94b5f66.jpg" class="zoom img-fluid "  alt=""></a>
+                    </div>
+                </div>
+                
+                <div class="image project-img">
+                  <div class="thumbnail">
+                      <a data-fancybox="video-gallery"  href="info/projects/WhatsApp Image 2024-04-23 at 14.53.01_aa45adf2.jpg" class="fancybox" rel="ligthbox"><img src="info/projects/WhatsApp Image 2024-04-23 at 14.53.01_aa45adf2.jpg" class="zoom img-fluid "  alt=""></a>
+                  </div>
+                 </div>
+
+                <div class="image event">
+                    <div class="thumbnail">
+                        <a data-fancybox="video-gallery"  href="info/event/WhatsApp Image 2024-04-23 at 14.30.35_07551da4.jpg" class="fancybox" rel="ligthbox"><img src="info/event/WhatsApp Image 2024-04-23 at 14.30.35_07551da4.jpg" class="zoom img-fluid "  alt=""></a>
+                    </div>
+                </div>
+
+                <div class="image event">
+                    <div class="thumbnail">
+                        <a data-fancybox="video-gallery"  href="info/event/WhatsApp Image 2024-04-23 at 14.30.35_d6dd9392.jpg" class="fancybox" rel="ligthbox"><img src="info/event/WhatsApp Image 2024-04-23 at 14.30.35_d6dd9392.jpg" class="zoom img-fluid "  alt=""></a>
+                    </div>
+                </div>
+                
+                <div class="image project-img">
+                  <div class="thumbnail">
+                      <a data-fancybox="video-gallery"  href="info/projects/WhatsApp Image 2024-04-23 at 14.30.36_7670a3ac.jpg" class="fancybox" rel="ligthbox"><img src="info/projects/WhatsApp Image 2024-04-23 at 14.30.36_7670a3ac.jpg" class="zoom img-fluid "  alt=""></a>
+                  </div>
+                 </div>
+                
+                <div class="image project-img">
+                  <div class="thumbnail">
+                      <a data-fancybox="video-gallery"  href="info/projects/WhatsApp Image 2024-04-23 at 14.46.06_ba055847.jpg" class="fancybox" rel="ligthbox"><img src="info/projects/WhatsApp Image 2024-04-23 at 14.46.06_ba055847.jpg" class="zoom img-fluid "  alt=""></a>
+                  </div>
+                 </div>
+                
+              
+
                 
             </div>
     </div>
@@ -191,15 +239,20 @@
   
   
   // Add active class to the current button (highlight it)
-  var btnContainer = document.getElementById("myBtnContainer");
-  var btns = btnContainer.getElementsByClassName("btn");
-  for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function(){
-      var current = document.getElementsByClassName("active");
-      current[0].className = current[0].className.replace(" active", "");
-      this.className += " active";
-    });
-  }
+  // Add active class to the current button (highlight it) and remove from others
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    // Remove active class from all buttons
+    for (var j = 0; j < btns.length; j++) {
+      btns[j].classList.remove("active");
+    }
+    // Add active class to the clicked button
+    this.classList.add("active");
+  });
+}
+
   </script>
 <!--*==================================================================
                         gallery END

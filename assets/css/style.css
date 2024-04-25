@@ -454,7 +454,7 @@ header .banner{
 
   .img-col{
     .img-div{
-      width: 80%;
+      width: 100%;
       margin: auto;
     }
   }
@@ -466,6 +466,15 @@ header .banner{
   header .banner{
     padding-top: 100px;
     height: fit-content;
+    padding-left: 0;
+    padding-bottom: 30px;
+    .row{
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+    .row .button--calypso{/* button styles */
+      padding: 15px 25px;
+    }
    .row h1{
       font-size: 3rem;
     }
@@ -473,6 +482,7 @@ header .banner{
       overflow: hidden;
       .img-div{
         height: 400px;
+        padding: 20px;
         img{
           width: 100%;
           height: 100%;
@@ -486,11 +496,11 @@ header .banner{
     }
   }
 }
-@media screen and (min-width:700px) {
+/* @media screen and (min-width:700px) {
   header .banner .img-col .img-div{
     padding: 10%;
   }
-}
+} */
 
 /*==================================================================
                         Banner END

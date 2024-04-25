@@ -1256,13 +1256,47 @@ footer{
                         gallery.html
 ==================================================================*/
 .sctn-gallery{
+  #myBtnContainer{
+    .btn.active{
+      background: linear-gradient(45deg, #0075a9, #2ea7d2);
+      color: white;
+      border: 0;
+    }
+  }
+  .images{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 5px;
+  }
   .image{
     display: none;
+    height: fit-content;
+    overflow: hidden;
+    height: 200px;
+    .thumbnail{
+      height: 100%;
+    }
+    .thumbnail img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
   .image.show{
     display: block;
   }
 }
+@media screen and (max-width:995px) {
+  .sctn-gallery .images{
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+@media screen and (max-width:765px) {
+  .sctn-gallery .images{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
 /*==================================================================
                         gallery.html  END
 ==================================================================*/
