@@ -1048,57 +1048,34 @@ footer{
 /*==================================================================
                         section-4 courses 
 ==================================================================*/
+@keyframes right-arrow {
+  0%{
+    opacity: 0;
+    transform: scale(0) translateX(-100%);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1) translateX(0);
+  }
+}
 .sctn-4.courses{
   padding-top: 50px;
-  .title{
-    font-weight: bolder;
-    font-size: 6rem;
-    text-transform: uppercase;
-    padding-bottom: 10px;
-    background-color: #b4b6b9;
-    color: transparent;
-    text-shadow: 3px 2px 2px rgb(255 255 255 / 50%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-  }
+  
   .card{
     border: 0;
-    background-color: var(--primary-bg);
     height: 100%;
+    background: white;
+    border-radius: 15px;
+    text-decoration: none;
     .img-div{
-      border-radius: 15px;
+      border-radius: 13px;
       overflow: hidden;
       position: relative;
       z-index: 2;
-      .crs-name{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: fit-content;
-        padding: 5px 20px 0 20px;
-        background-color: white;
-        border-radius: 15px 15px 0 0;
-        font-weight: bold;
-        font-size: 1.5rem;
-        letter-spacing: 1px;
-        color: var(--primary-clr);
-        opacity: 0;
-        .img-1,.img-2{
-          position: absolute;
-          height: 80%;
-          bottom: 0;
-        }
-        .img-1{
-          left: 2px;
-          transform: translateX(-100%) scaleX(-1);
-        }
-        .img-2{
-          right: 2px;
-          transform: translateX(100%);
-        }
+      margin: 5px;
+      height: 180px;
+      img{
+        object-fit: cover;
       }
     }
     .img-div.aos-animate{
@@ -1107,21 +1084,41 @@ footer{
         animation: courseTitle 1s linear both;
       }
     }
-    .duration{
-      text-align: center;
-      justify-content: center;
-      gap: 5px;
-      padding-top: 10px;
-      h5{
-        color: rgb(58, 200, 58);
-        text-transform: capitalize;
-      }
-    }
+    
     .card-body{
       background-color: white;
       border-radius: 0 0 10px 10px;
       position: relative;
       overflow: hidden;
+      padding-bottom: 30px;
+      .crs-type{
+        font-size: 12px;
+        padding: 0 5px;
+        margin-bottom: 0;
+        color: white;
+        background-color: #daae40;
+        width: fit-content;
+        border-radius: 2px;
+      }
+      .card-title{
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        color: #222;
+      }
+      .duration{
+        text-transform: capitalize;
+        color: #27a672;
+        font-weight: 600;
+      }
+      .cnt{
+        color: grey;
+        font-size: 13px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+      }
     }
     .card-body::before{
       content: '';
@@ -1134,17 +1131,65 @@ footer{
       background-color: white;
       z-index: 0;
     }
-    .cnt p{
-      text-align: center;
-      font-size: 1.1rem;
-      color: #3834348a;
+    .card-footer{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px;
+      .crs-details-btn,.contact-btn{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+        justify-content: center;
+        border-radius: 8px;
+        font-weight: bold;
+        padding: 10px 0;
+      }
+      .contact-btn{
+        background-color: #087d4c;
+        border: 0;
+        color: white;
+      }
+      .crs-details-btn{
+        background: white;
+        color: #22359f9c;
+        border: 2px solid #22359f9c;
+        transition: 0.4s;
+        *{
+          transition: 0.4s;
+        }
+        .fa-chevron-right:nth-child(1){
+          margin-left: 3px;
+        }
+        .fa-chevron-right:nth-child(3){
+          transform: scale(0) translateX(-100%);
+        }
+        .fa-chevron-right:nth-child(4){
+          transform: scale(0) translateX(-100%);
+        }
+      }
+      .crs-details-btn:hover{
+        background-color: #22359f;
+        color: white;
+        border: 2px solid #22359f;
+        .fa-chevron-right:nth-child(3){
+          animation: right-arrow 0.4s linear both;
+        }
+        .fa-chevron-right:nth-child(4){
+          animation-delay: 0.5s;
+          animation: right-arrow 0.4s linear both;
+        }
+      }
     }
   }
 }
 @media screen and (max-width:900px) {
   .sctn-4.courses{
+    .row .col-md-4{
+      margin: auto;
+      margin-bottom: 30px;
+    }
     .title{
-      font-size: 3rem;
+      font-size: 2rem;
     }
   } 
 }
@@ -1299,4 +1344,67 @@ footer{
 
 /*==================================================================
                         gallery.html  END
+==================================================================*/
+
+
+
+/*==================================================================
+                        testimonial.html  END
+==================================================================*/
+.tesimonial-section{
+  padding: 50px 0;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 20rem;
+    column-gap: 1rem;
+  }
+   ul li {
+    break-inside: avoid;
+    margin: 0 0 1rem;
+  }
+  /* ul li img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  } */
+  ul li .card{
+    border-radius: 10px;
+    .card-footer{
+      justify-content: space-between;
+      .user-details{
+        width: fit-content;
+        .name,.address,.date{
+          margin-bottom: 0;
+        }
+        .name{
+          font-weight: 600;
+          text-transform: capitalize;
+        }
+        .address{
+          color: #198754;
+          font-size: 15px;
+        }
+        .date{
+          font-size: 13px;
+          color: grey;
+        }
+      }
+      .profile{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .profile .profile-img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+/*==================================================================
+                        testimonial.html  
 ==================================================================*/

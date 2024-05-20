@@ -8,5 +8,25 @@ RewriteRule ^features$ features.html [L]
 RewriteRule ^projects$ projects.html [L]
 RewriteRule ^project-details$ project-details.html [L]
 RewriteRule ^gallery$ gallery.html [L]
+RewriteRule ^testimonials$ testimonial.html [L]
+RewriteRule ^testimonial$ testimonial.html [L]
 RewriteRule ^courses$ courses.html [L]
+RewriteRule ^contactus$ contact.html [L]
 RewriteRule ^contact$ contact.html [L]
+
+
+
+RewriteRule ^course/mcse$ all-courses/mcse.html [L]
+
+RewriteRule ^course/ccna$ all-courses/ccna.html [L]
+RewriteRule ^course/ccnp$ all-courses/ccnp.html [L]
+
+RewriteRule ^course/firewall$ all-courses/firewall.html [L]
+RewriteRule ^course/ethical-hacking$ all-courses/ethical-hacking.html [L]
+
+RewriteRule ^course/comptia-a$ all-courses/comptia-a.html [L]
+RewriteRule ^course/comptia-n$ all-courses/comptia-n.html [L]
+
+RewriteRule ^course/elv-engineer$ all-courses/elv-engineer.html [L]
+
+RewriteRule ^course/office-administration$ all-courses/office-administration.html [L]

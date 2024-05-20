@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
 /////review slider
 $(document).ready(function(){
   $('.testimonial-slider').slick({
-      slidesToShow: 1,
+      slidesToShow: 2,
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 2000,
